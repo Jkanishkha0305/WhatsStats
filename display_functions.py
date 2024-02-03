@@ -39,10 +39,10 @@ def display_results(data_type, word, total_or_month, chart_type, message_counts,
     elif data_type == 'Word Count':
         st.subheader(f"Word Count for '{word}'")
         st.write(word_counts)
-        # if chart_type == 'Bar Chart':
-        #     display_bar_chart(data_type, word_counts)
-        # elif chart_type == 'Pie Chart':
-        #     display_pie_chart(data_type, word_counts)
+        if chart_type == 'Bar Chart':
+            display_bar_chart(data_type, word_counts)
+        elif chart_type == 'Pie Chart':
+            display_pie_chart(data_type, word_counts)
     elif data_type == 'Image Count':
         st.subheader("Image Count")
         st.write(image_counts.reset_index(name='Count'))
